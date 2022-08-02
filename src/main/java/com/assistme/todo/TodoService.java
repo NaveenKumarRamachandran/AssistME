@@ -14,17 +14,15 @@ public class TodoService {
 
     public String saveTodo(TodoEntity todoEntity) {
         todoRepository.save(todoEntity);
-        return  "Saved";
+        return "Saved";
     }
 
     public List<TodoEntity> getAllTodo() {
-        System.out.println(todoRepository.findAll().toString());
         return todoRepository.findAll();
     }
 
     public Optional<TodoEntity> getTodoByName(String name) {
-        Optional<TodoEntity> todoEntity = todoRepository.findById(Long.valueOf(1));
-        return todoEntity;
+        return todoRepository.findById(1L);
     }
 
 

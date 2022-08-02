@@ -8,19 +8,19 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-	@RequestMapping("ap1/v1/todo")
+@RequestMapping("ap1/v1/todo")
 public class TodoController {
-	@Autowired
-	TodoService todoService;
+    @Autowired
+    TodoService todoService;
 
-	@PostMapping("/create")
+    @PostMapping("/create")
     public String saveTodo(@Valid @RequestBody TodoEntity todoEntity) {
-    	return todoService.saveTodo(todoEntity);
+        return todoService.saveTodo(todoEntity);
     }
 
-	@GetMapping("/all")
-	public List<TodoEntity> getAllTodo() {
-		return todoService.getAllTodo();
-	}
+    @GetMapping("/all")
+    public List<TodoEntity> getAllTodo() {
+        return todoService.getAllTodo();
+    }
 
 }
