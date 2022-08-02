@@ -13,10 +13,6 @@ public class TodoService {
     TodoRepo todoRepository;
 
     public String saveTodo(TodoEntity todoEntity) {
-        Optional<TodoEntity> todo = todoRepository.findTodoEntityByName(todoEntity.getName());
-        if (todo.isPresent()) {
-        throw new IllegalStateException("Name Already Exist");
-        }
         todoRepository.save(todoEntity);
         return  "Saved";
     }
@@ -27,7 +23,7 @@ public class TodoService {
     }
 
     public Optional<TodoEntity> getTodoByName(String name) {
-        Optional<TodoEntity> todoEntity = todoRepository.findTodoEntityByName(name);
+        Optional<TodoEntity> todoEntity = todoRepository.findById(Long.valueOf(1));
         return todoEntity;
     }
 
