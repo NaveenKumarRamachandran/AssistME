@@ -2,6 +2,7 @@ package com.assistme.todo;
 
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -25,5 +26,10 @@ public class TodoService {
         return todoRepository.findById(1L);
     }
 
+    public void sampleHttp() {
+
+        HttpHeaders headers = new HttpHeaders();
+
+    }
 
 }

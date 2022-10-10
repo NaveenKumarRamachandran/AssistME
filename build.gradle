@@ -7,7 +7,7 @@ plugins {
 
 group = 'com.assistme'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+sourceCompatibility = '11'
 
 repositories {
 	mavenCentral()
@@ -18,6 +18,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.projectlombok:lombok:1.18.20'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.h2database:h2'
 	runtimeOnly 'mysql:mysql-connector-java'
@@ -25,6 +26,13 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'org.springdoc:springdoc-openapi-ui:1.6.9'
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
+//	implementation 'com.github.kongchen:swagger-maven-plugin:3.1.8'
+//	implementation 'io.github.robwin:swagger2markup-maven-plugin:0.9.3'
+//	implementation 'org.asciidoctor:asciidoctor-maven-plugin:2.2.1'
+	//org.openapitools:openapi-generator-gradle-plugin:5.0.0-beta2
+	//org.asciidoctor:asciidoctor-gradle-jvm-pdf:3.2.0
+
 }
 
 tasks.named('test') {

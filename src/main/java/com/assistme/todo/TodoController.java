@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("ap1/v1/todo")
+@RequestMapping("api/v1/todo")
 public class TodoController {
     @Autowired
     TodoService todoService;

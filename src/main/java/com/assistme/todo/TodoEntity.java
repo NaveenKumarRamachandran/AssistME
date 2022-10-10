@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.mail.Address;
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 
@@ -22,7 +23,9 @@ public class TodoEntity {
     @Column(name= "name")
     private String name;
 
+    @Size(max = 500)
     @Column(name= "description")
     private String description;
-
+//
+    private Address[] cc;
 }
